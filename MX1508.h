@@ -3,8 +3,6 @@
 
 #include "Arduino.h"
 
-typedef void (*CallBackFunction) ();
-
 typedef enum
 {
   FAST_DECAY  = 0,  // set non-PWM pin low
