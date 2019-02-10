@@ -19,17 +19,19 @@ class MX1508 {
   public:
     MX1508(uint8_t pinIN1, uint8_t pinIN2); // default fast decay, 2 pwm pins
     MX1508(uint8_t pinIN1, uint8_t pinIN2, DecayMode decayMode, NumOfPwmPins numPWM);
-    void motorGo(int pwmVal); // 
-    void setResolution(int resolution);
+    void motorGo(long pwmVal); // 
+    void setResolution(unsigned int resolution);
     int getPWM();
     void stopMotor(); 
-     
+	void analogWrite16(uint8_t pin, uint16_t val);
+    void setPWM16(uint8_t prescaler, unsigned int resolution);
   private:
   
-    byte _pinIN1;
-    byte _pinIN2;
+    uint8_t _pinIN1;
+    uint8_t _pinIN2;
+	bool _useAnalogWrite16 = false;
     int _pwmVal;
-    int _pwmResolution;   //max resolution of pwm, default is 255.  
+    int _pwmResolution = 255;   //max resolution of pwm, default is 255.  
     DecayMode _whichMode;
     NumOfPwmPins _numPwmPins;
 };
