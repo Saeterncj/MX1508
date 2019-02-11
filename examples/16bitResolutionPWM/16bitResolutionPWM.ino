@@ -1,11 +1,12 @@
 
 /*
+ * Created by: Cheng Saetern
  * This example is meant to demonstrate the ability to adjust pwm frequency and/or  
- * resolution for pin 9 and 10 using function setPWM16(uint8_t prescaler, unsigned int resolution).
- * Note that the equation for fast pwm frequency = frequency of MPU(16Mhz)/prescaler/resolution
+ * resolution for Arduino Nano/Uno pin 9 and 10 using function setPWM16(uint8_t prescaler, unsigned int resolution).
+ * Equation for fast pwm frequency = frequency of MPU(16Mhz)/prescaler/resolution
  * F_PWM = 16000000/prescaler/resolution.
- * prescaler argument can only be values of 1-5, representing 1,8,64,256,1024 respectively. 
- * resolution must be a value from 0-65535.
+ * prescaler argument value MUST be between 1-5, representing 1,8,64,256,1024 respectively. 
+ * resolution MUST be a value from 0-65535.
  */
  
 #include <MX1508.h>
@@ -29,7 +30,7 @@ void setup() {
   
   motorA.setPWM16(2,resolution); // prescaler at 8, resolution 1000, PWM frequency = 16Mhz/8/1000=2000Hz
   // prescalar 1=1, 2=8, 3=64, 4=256, 5 =1028
-  /*------------ The Class function is defined as below-----------------
+  /*------------ setPWM16 Class function is defined as below-----------------
    void MX1508::setPWM16(uint8_t prescaler, unsigned int resolution){
    if(prescaler > 5 || prescaler == 0) prescaler = 3; // default to 64 if not in range.
     DDRB  |= _BV(PB1) | _BV(PB2);       // set pin 9and 10 as outputs 

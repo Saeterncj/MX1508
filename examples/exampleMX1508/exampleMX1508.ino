@@ -11,8 +11,7 @@
  * NumOfPwmPins, either use 1 or 2 pwm. 
  * I recommend using 2 pwm pins per motor so spinning motor forward and backward gives similar response.
  * if using 1 pwm pin, make sure its pinIN1, then set pinIN2 to any digital pin. I dont recommend this setting because 
- * we need to use FAST_DECAY in one direction and SLOW_DECAY for the other direction. 
- * watch video for better description. 
+ * we need to use FAST_DECAY in one direction and SLOW_DECAY for the other direction.  
  */
 MX1508 motorA(PINA,PINB, FAST_DECAY, NUMPWM);
 

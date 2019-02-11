@@ -67,7 +67,6 @@ void MX1508::motorGo(long pwmSpeed) {
       analogWrite16(_pinIN1, pwmSpeed);
     } else if (this->_numPwmPins == PWM_2PIN) { // reverse fast decay
       pwmSpeed *= -1;
-      //digitalWrite(_pinIN1, LOW);
 	  analogWrite16(_pinIN1, 1);
       analogWrite16(_pinIN2, pwmSpeed);
     } else if (this->_numPwmPins == PWM_1PIN) { // reverse slow decay
@@ -87,7 +86,6 @@ void MX1508::motorGo(long pwmSpeed) {
     } else if (this->_numPwmPins == PWM_2PIN) { // reverse slow decay
       pwmSpeed *= -1;
       pwmSpeed = map(pwmSpeed, 0, _pwmResolution, _pwmResolution, 0);
-      //digitalWrite(_pinIN2, HIGH);
 	  analogWrite16(_pinIN2, _pwmResolution);
       analogWrite16(_pinIN1, pwmSpeed);
     } else if (this->_numPwmPins == PWM_1PIN) { // reverse fast decay
