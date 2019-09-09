@@ -11,5 +11,4 @@ The datasheet for MX1508 in chinese can be found here: https://bit.ly/2k7lxLm
 
 ---
 ![schematic] (https://raw.githubusercontent.com/Saeterncj/MX1508/master/images/MX1508ExampleWiring.png)
-![schematic] (https://raw.githubusercontent.com/Saeterncj/MX1508/master/images/MX1508pic.png)
 
