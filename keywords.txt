@@ -6,19 +6,19 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-MX1508       KEYWORD1
-DecayMode    KEYWORD1
-NumOfPWMPins KEYWORD1
+MX1508	KEYWORD1
+DecayMode	KEYWORD1
+NumOfPWMPins	KEYWORD1
 
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-motorGo	      KEYWORD2
+motorGo	KEYWORD2
 setResolution	KEYWORD2
-getPWM	      KEYWORD2
-stopMotor	    KEYWORD2
+getPWM	KEYWORD2
+stopMotor	KEYWORD2
 
 
 #######################################
