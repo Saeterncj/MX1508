@@ -13,12 +13,12 @@
 
 #define PINA 9
 #define PINB 10
-#define NUMPWM 2
+#define NUMPWM PWM_2PIN
 // MX1508 schematics(in Chinese) can be found here at: http://sales.dzsc.com/486222.html
 /*
  * MX1508(uint8_t pinIN1, uint8_t pinIN2, DecayMode decayMode, NumOfPwmPins numPWM);
  * DecayMode must be FAST_DECAY or SLOW_DECAY,
- * NumOfPwmPins, must be the value of 2 for setPWM16() function  
+ * NumOfPwmPins, must be PWM_2PIN for setPWM16() function  
  * PINA and PINB MUST!!! be pin 9 and 10 for setPWM16() function  
  * Example MX1508 myMotor(10,9,FAST_DECAY, 2). 
  */
