@@ -26,15 +26,15 @@ Here is a sample code of spinning a DC motor with a value of PWM = 100.
 
 #define PINA 9
 #define PINB 10
-#define NUMPWM 2
+#define NUMPWM PWM_2PIN
 #define PWM 100
 
 /*
  * MX1508(uint8_t pinIN1, uint8_t pinIN2, DecayMode decayMode, NumOfPwmPins numPWM);
  * DecayMode must be FAST_DECAY or SLOW_DECAY,
- * NumOfPwmPins, either use 1 or 2 pwm. 
+ * NumOfPwmPins, either use PWM_1PIN or PWM_2PIN. 
  * I recommend using 2 pwm pins per motor so spinning motor forward and backward gives similar response.
- * if using 1 pwm pin, make sure its pinIN1, then set pinIN2 to any digital pin. I dont recommend this setting because 
+ * if using 1 pwm pin, make sure its pinIN1, then set pinIN2 to any digital pin. I don't recommend this setting because 
  * we need to use FAST_DECAY in one direction and SLOW_DECAY for the other direction.  
  */
  
