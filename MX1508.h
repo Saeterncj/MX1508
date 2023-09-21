@@ -23,6 +23,7 @@ class MX1508 {
     void setResolution(unsigned int resolution);
     int getPWM();
     void stopMotor(); 
+    void brakeMotor(); 
 	void analogWrite16(uint8_t pin, uint16_t val);
     void setPWM16(uint8_t prescaler, unsigned int resolution);
   private:
