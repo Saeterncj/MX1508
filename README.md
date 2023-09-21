@@ -61,7 +61,9 @@ I see online that one of the main disadvantage of this motor driver is the requi
   + motorGo(pwmVal)
     - This sets the PWM val(~~speed~~). 
   + stopMotor()
-    - Simply stops the motor
+    - Simply stops the motor (standby) 
+  + brakeMotor()
+    - Causes the motor to brake
   + setResolution(pwmResolution)
     - It is possible to change the resolution of pwm.  To be able to use this feature,
     You must use pwm pins of 9 and 10 of arduino nano/uno to utulize the 16bit PWM. Theoretically, the value can be 

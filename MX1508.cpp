@@ -27,6 +27,11 @@ void MX1508::stopMotor() {
   digitalWrite(_pinIN2, LOW);
 }
 
+void MX1508::brakeMotor() {
+  digitalWrite(_pinIN1, HIGH);
+  digitalWrite(_pinIN2, HIGH);
+}
+
 void MX1508::setResolution(unsigned int pwmResolution) {
   _pwmResolution = pwmResolution;
   if(_useAnalogWrite16) ICR1 = pwmResolution; 
